@@ -7,8 +7,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * Created BY wangwenxiang on 2016/11/18.
  */
-public class LinkedBlockingJobQueue<T> extends BlockingJobQueue<T> {
+public class LinkedBlockingJobQueue extends BlockingJobQueue {
     public void init() {
-        blockingQueue = new LinkedBlockingQueue<Job<T>>(getCapacity());
+        blockingQueue = new LinkedBlockingQueue<Job>(getCapacity());
     }
 }

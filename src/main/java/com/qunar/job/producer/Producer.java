@@ -12,14 +12,14 @@ import com.qunar.util.Precondition;
  */
 public class Producer<T> {
 
-    private JobProducerQueue<T> queue;
+    private JobProducerQueue queue;
 
     private Actuator<T> actuator;
 
     /**
      * init producer
      */
-    public Producer(Actuator<T> actuator, BlockingJobQueue<T> queue) {
+    public Producer(Actuator<T> actuator, BlockingJobQueue queue) {
         Precondition.checkAllNotNull(actuator, queue);
         this.actuator = actuator;
         this.queue = queue;

@@ -5,11 +5,11 @@ import com.qunar.job.Job;
 /**
  * Created BY wangwenxiang on 2016/11/15.
  */
-public interface JobProducerQueue<T> {
+public interface JobProducerQueue {
     /**
      * add a job to queue if not full
      *
      * @param job to queue
      */
-    void put(Job<T> job) throws InterruptedException;
+    void put(Job job) throws InterruptedException;
 }

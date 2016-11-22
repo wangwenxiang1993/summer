@@ -8,15 +8,15 @@ import java.util.concurrent.BlockingQueue;
 /**
  * Created BY wangwenxiang on 2016/11/15.
  */
-public abstract class BlockingJobQueue<T> extends QueueBuilder implements JobProducerQueue<T>, JobConsumerQueue<T> {
+public abstract class BlockingJobQueue extends QueueBuilder implements JobProducerQueue, JobConsumerQueue {
 
-    protected BlockingQueue<Job<T>> blockingQueue;
+    protected BlockingQueue<Job> blockingQueue;
 
-    public void put(Job<T> job) throws InterruptedException {
+    public void put(Job job) throws InterruptedException {
         blockingQueue.put(job);
     }
 
-    public Job<T> take() throws InterruptedException {
+    public Job take() throws InterruptedException {
         return blockingQueue.take();
     }
 
