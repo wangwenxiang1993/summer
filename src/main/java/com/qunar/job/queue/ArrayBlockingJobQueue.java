@@ -7,8 +7,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * Created BY wangwenxiang on 2016/11/18.
  */
-public class ArrayBlockingJobQueue<T> extends BlockingJobQueue<T> {
+public class ArrayBlockingJobQueue extends BlockingJobQueue {
     public void init() {
-        blockingQueue = new ArrayBlockingQueue<Job<T>>(getCapacity());
+        blockingQueue = new ArrayBlockingQueue<Job>(getCapacity());
     }
 }
