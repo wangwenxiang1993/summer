@@ -19,7 +19,7 @@ public class Producer<T> {
     /**
      * init producer
      */
-    public Producer(Actuator<T> actuator, BlockingJobQueue queue) {
+    public Producer(Actuator<T> actuator, JobProducerQueue queue) {
         Precondition.checkAllNotNull(actuator, queue);
         this.actuator = actuator;
         this.queue = queue;

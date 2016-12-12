@@ -37,4 +37,8 @@ public class Job<T> {
     public void setT(T t) {
         this.t = t;
     }
+
+    public void exeCute(){
+        actuator.actuate(t);
+    }
 }
